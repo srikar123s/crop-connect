@@ -1,0 +1,388 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header Styling */
+.p-3 {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Align the icon container */
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Spacing between icons */
+.icon .position-relative {
+    margin-right: 30px;
+}
+
+/* Styling for the icons */
+#cart-btn, #login-btn {
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Cart badge styling */
+#cart-count {
+    position: absolute;
+    font-size: 10px;
+    padding: 0; /* Remove padding */
+    width: 20px; /* Set a fixed width */
+    height: 20px; /* Set a fixed height */
+    top: -5px;
+    right: -5px;
+    background-color: #ff5e57;
+    color: white;
+    border-radius: 50%; /* Make it circular */
+    display: flex; /* Use flexbox to center the text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+
+/* Hover effect for the icons */
+#cart-btn:hover, #login-btn:hover {
+    color: #212322;
+}
+
+/* Hero Section - Fullscreen with Centered Content */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("file:///C:/Users/srikar/OneDrive/Desktop/crop%20connect/images/home2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Product Categories Section */
+#products {
+    padding: 50px 0;
+}
+
+#products h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Flexbox Styling for Category */
+.row {
+    display: flex;
+    justify-content: space-between; /* Space between categories */
+}
+
+.category {
+    flex: 1; /* Makes categories take equal width */
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 10px; /* Adds horizontal spacing */
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.category img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.category a.btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.category a.btn:hover {
+    background-color: #218838;
+}
+
+
+.benefits {
+    margin: 40px 0; /* Space above and below the section */
+}
+
+.card {
+    flex: 1; /* Makes categories take equal width */
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 10px; /* Adds horizontal spacing */
+    transition: box-shadow 0.3s;
+    display: inline-block;
+    
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    
+}
+
+.card-body {
+    padding: 20px; /* Padding inside the card */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Increase font size for titles */
+    font-weight: bold; /* Make the title bold */
+    margin: 10px 0; /* Space above and below the title */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.25rem; /* Slightly smaller title on smaller screens */
+    }
+}
+
+
+/* Testimonials Section */
+.testimonial-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.testimonial-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.testimonial-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.testimonial-rating {
+    font-size: 1.2rem;
+    color: #f39c12;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial-box img {
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Product Card */
+.product {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 0 1 calc(33.333% - 40px);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: #6c757d;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+
+.product .addCart {
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product .addCart:hover {
+    background-color: #ffc107; /* Darker green on hover */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #343a40;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-contact,
+.footer-social,
+.footer-newsletter,
+.footer-map {
+    flex-basis: calc(25% - 20px);
+    min-width: 200px;
+}
+
+.footer-contact h4,
+.footer-social h4,
+.footer-newsletter h4,
+.footer-map h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #28a745;
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 300px;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.footer-newsletter button:hover {
+    background-color: #218838;
+}
+
+.footer-map iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+}
+
+/* Copyright */
+.footer-copyright {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #23272b;
+    color: #fff;
+    font-size: 14px;
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Connect - Home</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="p-3 bg-light text-black">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="home.html" class="navbar-brand">
+                    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\Screenshot 2024-10-04 103548.png" alt="Crop Connect Logo" width="50"> <b>Crop Connect</b>
+                </a>
+                <nav>
+                    <ul class="nav ">
+                        <li class="nav-item"><a href="home.html" class="nav-link text-black">Home</a></li>
+                        <li class="nav-item"><a href="#products" class="nav-link text-black">Categories</a></li>
+                        <li class="nav-item"><a href="#benefits" class="nav-link text-black">Features</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link text-black">Contact Us</a></li>                       
+                    </ul>
+                </nav>
+                <div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light text-black" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="icon d-flex align-items-center">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal" class="position-relative me-3">
+                        <div class="fas fa-shopping-cart" id="cart-btn" style="cursor: pointer;">
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </div>
+                    </a>
+                    <a href="login.html">
+                        <div class="fas fa-user" id="login-btn" style="cursor: pointer;"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div>
+            <h1>Quality Seeds, Fertilizers, and Tools for Your Farming Needs</h1>
+            <p>Explore our wide range of products to boost your farm productivity.</p>
+            <a href="#best" class="btn btn-warning btn-lg">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section class="container py-5" id="products">
+        <h2 class="text-center">Product Categories</h2><br>
+        <div class="row text-center d-flex justify-content-between">
+            <div class="category">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\seeds.png" alt="Seeds" class="img-fluid">
+                <h3>Seeds</h3>
+                <p>Explore our high-quality organic seeds.</p>
+                <a href="seeds.html" class="btn btn-primary">Shop Seeds</a>
+            </div>
+            <div class="category">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\fert.jpeg" alt="Chemicals" class="img-fluid">
+                <h3>Chemicals</h3>
+                <p>Buy the best Fertilizers for your crops.</p>
+                <a href="fer.html" class="btn btn-primary">Shop Fertilizers</a>
+            </div>
+            <div class="category">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\tools.png" alt="Tools" class="img-fluid">
+                <h3>Tools</h3>
+                <p>Find durable tools for your farming operations.</p>
+                <a href="tools.html" class="btn btn-primary">Shop Tools</a>
+            </div>
+        </div>
+    </section>
+    
+
+ 
+  <!-- Featured Products Section -->
+<section class="container py-5" id="best">
+    <h2 class="text-center">Best Sellers</h2>
+    <br>
+
+    <div class="row">
+        
+
+        <div class="col-md-4">
+            <div class="product" data-id="4">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\cap.png" class="img-fluid" alt="Bell Pepper Seeds">
+                <h2>Bell Pepper Seeds</h2>
+                <p>High-quality seeds for sweet and crunchy bell peppers in various colors.</p>
+                <p class="price">₹160 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product" data-id="10">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\sun.png" class="img-fluid" alt="Sunflower Seeds">
+                <h2>Sunflower Seeds</h2>
+                <p>Premium seeds for vibrant sunflowers with high oil content.</p>
+                <p class="price">₹200 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product" data-id="11">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\brin.png" class="img-fluid" alt="Brinjal Seeds">
+                <h2>Brinjal Seeds</h2>
+                <p>High-quality seeds for growing healthy and flavorful brinjals.</p>
+                <p class="price">₹150 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+       
+        
+        <div class="col-md-4">
+            <div class="product" data-id="19">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\vermicompost.jpg" class="img-fluid" alt="Vermi Compost">
+                <h2>Vermi Compost</h2>
+                <p>Organic fertilizer produced by earthworms, enriching soil fertility.</p>
+                <p class="price">₹299 per bag (10 kg)</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product" data-id="23">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\urea.png" class="img-fluid" alt="Urea Fertilizer">
+                <h2>Urea Fertilizer</h2>
+                <p>High nitrogen content fertilizer promoting lush green growth.</p>
+                <p class="price">₹749 per bag (50 kg)</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product" data-id="17">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\bisbac.png" class="img-fluid" alt="Bispyribac Sodium 10% SC">
+                <h2>Bispyribac Sodium 10%</h2>
+                <p>Selective herbicide for controlling grasses and broadleaf weeds in rice crops.</p>
+                <p class="price">₹449 per liter</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+       
+        
+        <div class="col-md-4">
+            <div class="product" data-id="31">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\earthaguer.jpg" class="img-fluid" alt="Earth Auger">
+                <h2>Earth Auger</h2>
+                <p>Powerful tool for digging holes quickly and efficiently.</p>
+                <p class="price">₹8000 per unit</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product" data-id="35">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\seedp.png" class="img-fluid" alt="Seed Planter">
+                <h2>Seed Planter</h2>
+                <p>Precision tool for accurate and fast seed planting for large fields.</p>
+                <p class="price">₹25999 per unit</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="product" data-id="32">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\spary.jpg" class="img-fluid" alt="Backpack Sprayer">
+                <h2>Backpack Sprayer</h2>
+                <p>Efficient sprayer for applying pesticides and fertilizers over large areas.</p>
+                <p class="price">₹9599 per unit</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Cart Modal -->
+ <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">
+                    <i class="fas fa-shopping-cart me-2"></i>Shopping Cart
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div>
+                    <button type="button" class="btn btn-danger" onclick="clearCart()">
+                        <i class="fas fa-trash me-2"></i>Clear Cart
+                    </button>
+                </div>
+                <div>
+                    <h5 class="me-3 d-inline-block">Total: <span id="cart-total">₹0</span></h5>
+                   <!-- <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>-->
+                    <button type="button" class="btn btn-secondary me-2" onclick="checkout()">
+                        <i class="fas fa-shopping-bag me-2"></i>Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Benefits Section -->
+
+    <!-- Benefits Section -->
+<section class="container py-5" id="benefits">
+    <h2 class="text-center">Our Features</h2><br>
+    <div class="row text-center d-flex justify-content-between">
+        <div class="category col-md-4">
+            <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\images.jpeg" alt="Fresh Products" class="img-fluid">
+            <h3>Fresh and Quality Products</h3>
+            <p>We offer the best quality products sourced directly from farmers.</p>
+            
+        </div>
+        <div class="category col-md-4">
+            <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\delivery.jpg" alt="Free Shipping" class="img-fluid">
+            <h3>Free Shipping on Orders</h3>
+            <p>Get your products delivered to your doorstep for free.</p>
+            
+        </div>
+        <div class="category col-md-4">
+            <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\customer-support.jpg" alt="Customer Support" class="img-fluid">
+            <h3>Customer Support 24/7</h3>
+            <p>We are here to assist you anytime, day or night.</p>
+            
+        </div>
+    </div>
+</section>
+    
+   <!-- Testimonials Section -->
+<section class="testimonial-section py-5"id="rev">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="testimonial-box shadow p-4 mb-4">
+                    <img src="C:\Users\srikar\OneDrive\Pictures\Screenshots\avatar-men-design-vector-14499035.jpg" alt="Customer Photo" class="rounded-circle mb-3" width="80" height="80">
+                    <p class="testimonial-text">"Great quality seeds! My crops have been healthier!"</p>
+                    <span class="testimonial-rating">★★★★★</span>
+                    <p class="testimonial-name mt-2">- John Smith</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-box shadow p-4 mb-4">
+                    <img src="C:\Users\srikar\OneDrive\Pictures\Screenshots\avatar-men-design-vector-14499035.jpg" alt="Customer Photo" class="rounded-circle mb-3" width="80" height="80">
+                    <p class="testimonial-text">"Fast shipping and excellent customer service."</p>
+                    <span class="testimonial-rating">★★★★☆</span>
+                    <p class="testimonial-name mt-2">- Sarah Johnson</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-box shadow p-4 mb-4">
+                    <img src="C:\Users\srikar\OneDrive\Pictures\Screenshots\avatar-men-design-vector-14499035.jpg" alt="Customer Photo" class="rounded-circle mb-3" width="80" height="80">
+                    <p class="testimonial-text">"Affordable tools that get the job done!"</p>
+                    <span class="testimonial-rating">★★★★★</span>
+                    <p class="testimonial-name mt-2">- David Lee</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+  
+    <footer class="footer-section">
+        <div class="container" id="contact">
+            <!-- Contact Information -->
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@example.com</p>
+                <p>Phone: +91 12345 67890</p>
+                <p>Address: VIT University, Vellore, Tamil Nadu, India</p>
+            </div>
+    
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+    
+            <!-- Newsletter Subscription Form -->
+            <div class="footer-newsletter">
+                <h4>Subscribe to our Newsletter</h4>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+    
+            <!-- Embedded Google Map -->
+            <div class="footer-map">
+                <h4>Our Location</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.795738720547!2d79.15595941526065!3d12.971598618589975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad4734c5b14965%3A0xcbe9f12fb7f67148!2sVIT%20Vellore%2C%20Tamil%20Nadu%20632014!5e0!3m2!1sen!2sin!4v1696600984567!5m2!1sen!2sin" 
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>            
+        </div>
+        <br>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Crop Connect. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

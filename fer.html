@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizers Store - Crop Connect</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="produ.css">
+</head>
+<body>
+
+    <header class="p-3 bg-light text-black">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="home.html" class="navbar-brand">
+                    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\Screenshot 2024-10-04 103548.png" alt="Crop Connect Logo" width="50"> <b>Crop Connect</b>
+                </a>
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="home.html" class="nav-link text-black">Home</a></li>
+                        <li class="nav-item"><a href="seeds.html" class="nav-link text-black">Seeds</a></li>
+                        <li class="nav-item"><a href="tools.html" class="nav-link text-black">Tools</a></li>
+                        <li class="nav-item"><a href="home.html#contact" class="nav-link text-black">Contact Us</a></li>                       
+                    </ul>
+                </nav>
+                <div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light text-black" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="icon d-flex align-items-center">
+                    <div class="position-relative me-3">
+                        <div class="fas fa-shopping-cart" id="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal" style="cursor: pointer;">
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="products d-flex flex-wrap justify-content-between">
+           <!-- Product 1 -->
+<div class="product" data-id="13">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\npk.png" class="img-fluid" alt="NPK Fertilizer">
+    <h2>NPK 20-20-20 Fertilizer</h2>
+    <p>Balanced nutrients for better crop yields.</p>
+    <p class="price">₹6499 per bag (50 kg)</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 2 -->
+<div class="product" data-id="14">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\potash.png" class="img-fluid" alt="Potash Fertilizer">
+    <h2>Potash Fertilizer</h2>
+    <p>Essential potassium fertilizer for crop growth.</p>
+    <p class="price">₹299 per kg</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 3 -->
+<div class="product" data-id="15">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\cal.jpg" class="img-fluid" alt="Calcium Nitrate">
+    <h2>Calcium Nitrate Fertilizer</h2>
+    <p>Boosts plant development with nitrogen and calcium.</p>
+    <p class="price">₹249 per kg</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 4 -->
+<div class="product" data-id="16">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\ver.png" class="img-fluid" alt="Insecticide">
+    <h2>Verticoz-P Bio Insecticide</h2>
+    <p>High-efficiency insecticide to protect crops from harmful pests.</p>
+    <p class="price">₹699 per liter</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 5 -->
+<div class="product" data-id="17">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\bisbac.png" class="img-fluid" alt="Herbicide">
+    <h2>Bispyribac Sodium 10% </h2>
+    <p>Controls weeds and promotes healthy crop growth.</p>
+    <p class="price">₹449 per liter</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 6 -->
+<div class="product" data-id="18">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\ant.png" class="img-fluid" alt="Fungicide">
+    <h2>Antracol Propineb 70% WP</h2>
+    <p>Protects crops from fungal diseases and increases yields.</p>
+    <p class="price">₹999 per kg</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 7 -->
+<div class="product" data-id="19">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\vermicompost.jpg" class="img-fluid" alt="Organic Fertilizer">
+    <h2>Vermicompost</h2>
+    <p>Eco-friendly fertilizer to boost plant growth naturally.</p>
+    <p class="price">₹299 per bag</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 8 -->
+<div class="product" data-id="20">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\dap.jpeg" class="img-fluid" alt="DAP Fertilizer">
+    <h2>Diammonium Phosphate (DAP) Fertilizer</h2>
+    <p>High-performance fertilizer providing essential nitrogen and phosphorus for optimal plant growth.</p>
+    <p class="price">₹1199 per bag (50 kg)</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 9 -->
+<div class="product" data-id="21">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\weed.png" class="img-fluid" alt="Glyphosate">
+    <h2>Glyphosate Weed Killer</h2>
+    <p>Highly effective herbicide for broad weed control.</p>
+    <p class="price">₹399 per liter</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 10 -->
+<div class="product" data-id="22">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\org.png" class="img-fluid" alt="Organic Compost">
+    <h2>Organic Manure</h2>
+    <p>Rich compost for improved soil fertility and health.</p>
+    <p class="price">₹799 per bag (40 kg)</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 11 -->
+<div class="product" data-id="23">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\urea.png" class="img-fluid" alt="Urea Fertilizer">
+    <h2>Urea Fertilizer</h2>
+    <p>Provides essential nitrogen for healthy plant growth.</p>
+    <p class="price">₹749 per bag (50 kg)</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+<!-- Product 12 -->
+<div class="product" data-id="24">
+    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\chl.png" class="img-fluid" alt="Chlorpyrifos Insecticide">
+    <h2>Chlorpyrifos Insecticide</h2>
+    <p>Effective control against soil and foliage pests.</p>
+    <p class="price">₹1399 per liter</p>
+    <button class="addCart btn btn-primary">Add to Cart</button>
+</div>
+
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">
+                    <i class="fas fa-shopping-cart me-2"></i>Shopping Cart
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div>
+                    <button type="button" class="btn btn-danger" onclick="clearCart()">
+                        <i class="fas fa-trash me-2"></i>Clear Cart
+                    </button>
+                </div>
+                <div>
+                    <h5 class="me-3 d-inline-block">Total: <span id="cart-total">₹0</span></h5>
+                    
+                    <button type="button" class="btn btn-secondary me-2" onclick="checkout()">
+                        <i class="fas fa-shopping-bag me-2"></i>Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <footer class="bg-light text-black text-center py-3">
+        <p>&copy; 2024 Crop Connect. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

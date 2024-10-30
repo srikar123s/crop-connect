@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seed Store - Crop Connect</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="produ.css">
+</head>
+<body>
+
+    <header class="p-3 bg-light text-black ">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="home.html" class="navbar-brand">
+                    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\Screenshot 2024-10-04 103548.png" alt="Crop Connect Logo" width="50"> <b>Crop Connect</b>
+                </a>
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="home.html" class="nav-link text-black">Home</a></li>
+                        <li class="nav-item"><a href="fer.html" class="nav-link text-black">Fertilizers</a></li>
+                        <li class="nav-item"><a href="tools.html" class="nav-link text-black">Tools</a></li>
+                        <li class="nav-item"><a href="home.html#contact" class="nav-link text-black">Contact Us</a></li>                       
+                    </ul>
+                </nav>
+                <div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light text-black" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="icon d-flex align-items-center">
+                    <div class="position-relative me-3">
+                        <div class="fas fa-shopping-cart" id="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal" style="cursor: pointer;">
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="products d-flex flex-wrap justify-content-between">
+            <!-- Seed 1 -->
+            <div class="product" data-id="1">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\corn.jpg" class="img-fluid" alt="Corn Seeds">
+                <h2>Corn Seeds</h2>
+                <p>High-quality corn seeds for maximum yield.</p>
+                <p class="price">₹150 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 2 -->
+            <div class="product" data-id="2">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\wheat.jpg" class="img-fluid" alt="Wheat Seeds">
+                <h2>Wheat Seeds</h2>
+                <p>Premium seeds for high crop production.</p>
+                <p class="price">₹120 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 3 -->
+            <div class="product" data-id="3">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\rice.png" class="img-fluid" alt="Rice Seeds">
+                <h2>Rice Seeds</h2>
+                <p>Quality seeds for better grain yield.</p>
+                <p class="price">₹140 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 4 -->
+            <div class="product" data-id="4">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\cap.png" class="img-fluid" alt="Bell Pepper Seeds">
+                <h2>Bell Pepper Seeds</h2>
+                <p>Seeds for colorful and crunchy bell peppers.</p>
+                <p class="price">₹160 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 5 -->
+            <div class="product" data-id="5">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\barley.jpg" class="img-fluid" alt="Barley Seeds">
+                <h2>Barley Seeds</h2>
+                <p>High-yield barley seeds for brewing and livestock.</p>
+                <p class="price">₹160 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 6 -->
+            <div class="product" data-id="6">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\millet.jpg" class="img-fluid" alt="Millet Seeds">
+                <h2>Millet Seeds</h2>
+                <p>Nutrient-rich seeds for a drought-resistant crop.</p>
+                <p class="price">₹100 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 7 -->
+            <div class="product" data-id="7">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\cumber.png" class="img-fluid" alt="Cucumber Seeds">
+                <h2>Cucumber Seeds</h2>
+                <p>High-quality seeds for refreshing cucumbers.</p>
+                <p class="price">₹120 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 8 -->
+            <div class="product" data-id="8">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\tom.png" class="img-fluid" alt="Tomato Seeds">
+                <h2>Tomato Seeds</h2>
+                <p>High-yield seeds for juicy and flavorful tomatoes.</p>
+                <p class="price">₹150 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 9 -->
+            <div class="product" data-id="9">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\bean.png" class="img-fluid" alt="Bean Seeds">
+                <h2>Bean Seeds</h2>
+                <p>Nutritious seeds for various dishes and crop rotation.</p>
+                <p class="price">₹120 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 10 -->
+            <div class="product" data-id="10">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\sun.png" class="img-fluid" alt="Sunflower Seeds">
+                <h2>Sunflower Seeds</h2>
+                <p>High oil content seeds for oil production.</p>
+                <p class="price">₹200 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 11 -->
+            <div class="product" data-id="11">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\brin.png" class="img-fluid" alt="Brinjal Seeds">
+                <h2>Brinjal Seeds</h2>
+                <p>High-quality seeds for growing healthy and flavorful brinjals.</p>
+                <p class="price">₹150 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+            <!-- Seed 12 -->
+            <div class="product" data-id="12">
+                <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\cotton.jpg" class="img-fluid" alt="Cotton Seeds">
+                <h2>Cotton Seeds</h2>
+                <p>Seeds for high-quality cotton production.</p>
+                <p class="price">₹250 per kg</p>
+                <button class="addCart btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+  <!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">
+                    <i class="fas fa-shopping-cart me-2"></i>Shopping Cart
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div>
+                    <button type="button" class="btn btn-danger" onclick="clearCart()">
+                        <i class="fas fa-trash me-2"></i>Clear Cart
+                    </button>
+                </div>
+                <div>
+                    <h5 class="me-3 d-inline-block">Total: <span id="cart-total">₹0</span></h5>
+                    
+                    <button type="button" class="btn btn-secondary me-2" onclick="checkout()">
+                        <i class="fas fa-shopping-bag me-2"></i>Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <footer class="bg-light text-black text-center py-3">
+        <p>&copy; 2024 Crop Connect. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

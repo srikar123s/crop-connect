@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Connect - Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ch.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="home.html" class="navbar-brand text-black">
+                    <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\Screenshot 2024-10-04 103548.png" alt="Crop Connect Logo" width="50"> <b>Crop Connect</b>
+                </a>
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="home.html" class="nav-link text-black">Home</a></li>
+                        <li class="nav-item"><a href="seeds.html" class="nav-link text-black">Seeds</a></li>
+                        <li class="nav-item"><a href="fer.html" class="nav-link text-black">Fertilizers</a></li>
+                        <li class="nav-item"><a href="tools.html" class="nav-link text-black">Tools</a></li>
+
+                    </ul>
+                </nav>
+                <div class="icon d-flex align-items-center">
+                    <div class="position-relative me-3">
+                        <div class="fas fa-shopping-cart" id="cart-btn" onclick="showCart()" style="cursor: pointer;">
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <div class="container">
+            <div class="checkout-progress">
+                <div class="step active">1. Shipping Info</div>
+                <div class="step">2. Payment</div>
+                <div class="step">3. Review</div>
+            </div>
+
+            <div class="checkout-layout">
+                <div class="checkout-form">
+                    <h2>Shipping Information</h2>
+                    <form id="checkout-form">
+                        <label for="country">Country/Region</label>
+                        <select id="country" required>
+                            <option value="India" selected>India</option>
+                            <!-- Add more countries as needed -->
+                        </select>
+
+                        <label for="name">Full Name (First and Last Name)</label>
+                        <input type="text" id="name" required>
+
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" required placeholder="10-digit number" title="Please enter a 10-digit mobile number">
+                        
+                        <label for="pincode">Pincode</label>
+                        <input type="text" id="pincode" required placeholder="6-digit PIN code" title="Please enter a 6-digit PIN code">
+
+                        <label for="address">Flat, House no., Building, Company, Apartment</label>
+                        <input type="text" id="address" required>
+
+                        <label for="area">Area, Street, Sector, Village</label>
+                        <input type="text" id="area" required>
+
+                        <label for="landmark">Landmark</label>
+                        <input type="text" id="landmark" placeholder="E.g. near Apollo Hospital">
+
+                        <label for="town">Town/City</label>
+                        <input type="text" id="town" required>
+
+                        <label for="state">State</label>
+                        <select id="state" required>
+                            <option value="" disabled selected>Choose a state</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <!-- Add more states as needed -->
+                        </select>
+
+                        <button type="button" id="proceed-button" onclick="proceedToPayment()">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                
+                                <th>Product</th>
+                                
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items"></tbody>
+                        <tr>
+                            <td>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Subtotal :</td>
+                            <td id="cart-total">₹0</td>
+                        </tr>
+                        <tr>
+                            <td>Delivery Charge :</td>
+                            <td id="delivery-charge">₹0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Amount :</strong></td>
+                            <td id="final-amount"><strong>₹0</strong></td>
+                        </tr>
+                    </table>
+                   
+                </div>
+    
+            </div>
+
+            <!-- Cart Modal -->
+ <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">
+                    <i class="fas fa-shopping-cart me-2"></i>Shopping Cart
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div>
+                    <button type="button" class="btn btn-danger" onclick="clearCart()">
+                        <i class="fas fa-trash me-2"></i>Clear Cart
+                    </button>
+                </div>
+                <div>
+                    <h5 class="me-3 d-inline-block">Total: <span id="cart-total">₹0</span></h5>
+                   <!-- <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>-->
+                    <button type="button" class="btn btn-secondary me-2" onclick="checkout()">
+                        <i class="fas fa-shopping-bag me-2"></i>Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <div class="payment-methods" id="payment-section">
+                <h2> Payment Method</h2>
+
+                <div class="payment-method">
+                    <input type="radio" id="credit-debit" name="payment" value="credit-debit">
+                    <label for="credit-debit">Credit or debit card <br>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Logo_Visa.svg/1200px-Logo_Visa.svg.png" alt="Visa" width="20"> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/MasterCard-logo.svg/1200px-MasterCard-logo.svg.png" alt="MasterCard" width="20"> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Maestro_logo.svg/1280px-Maestro_logo.svg.png" alt="Maestro" width="20"> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Rupay_logo.svg/ 1200px-Rupay_logo.svg.png" alt="RuPay" width="20">
+                    </label>
+                </div>
+
+                <div class="payment-method">
+                    <input type="radio" id="net-banking" name="payment" value="net-banking">
+                    <label for="net-banking">Net Banking <br>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/ICICI_Bank_logo.svg/1200px-ICICI_Bank_logo.svg.png" alt="ICICI Bank" width="20"> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/HDFC_Bank_logo.svg/1200px-HDFC_Bank_logo.svg.png" alt="HDFC Bank" width="20"> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Axis_Bank_logo.svg/1200px-Axis_Bank_logo.svg.png" alt="Axis Bank" width="20"> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/SBI_logo.svg/1200px-SBI_logo.svg.png" alt="SBI" width="20">
+                    </label>
+                </div>
+
+                <div class="payment-method">
+                    <input type="radio" id="wallet" name="payment" value="wallet">
+                    <label for="wallet">Wallet <br>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Paytm_logo.svg/1200px-Paytm_logo.svg.png" alt="Paytm" width="20"> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/PhonePe_logo.svg/1200px-PhonePe_logo.svg.png" alt="PhonePe" width="20"> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Google_Pay_logo.svg/1200px-Google_Pay_logo.svg.png" alt="Google Pay" width="20">
+                    </label>
+                </div>
+
+                <div class="payment-method">
+                    <input type="radio" id="cod" name="payment" value="cod">
+                    <label for="net-banking">Cash On Delivery <br>
+                        
+                    </label>
+                </div>
+
+                <button class="use-payment" id="proceed-payment">Make Payment</button>
+            </div>
+
+            <div class="customer-support">
+                <p>Need help? Contact our customer support team.</p>
+                <button id="support-btn">Support</button>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
