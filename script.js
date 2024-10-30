@@ -307,8 +307,106 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+function makePayment() {
+    // Verify payment method is selected
+    const selectedPayment = document.querySelector('input[name="payment"]:checked');
+    if (!selectedPayment) {
+        alert('Please select a payment method.');
+        return;
+    }
+
+    // Hide payment methods section
+    const paymentMethods = document.getElementById('payment-methods');
+    if (paymentMethods) {
+        paymentMethods.style.display = 'none';
+    }
+
+    // Show review section
+    const reviewSection = document.getElementById('review-section');
+    if (reviewSection) {
+        reviewSection.style.display = 'block';
+    }
+
+    // Populate order summary with images
+    const orderSummaryItems = document.getElementById('order-summary-items');
+    orderSummaryItems.innerHTML = ''; // Clear previous items
+
+    let subtotal = 0;
+    for (const id in cart) {
+        const item = cart[id];
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+        orderSummaryItems.innerHTML += `
+            <tr>
+                <td class="align-middle">
+                    <div class="d-flex align-items-center">
+                        <img src="${item.image}" alt="${item.name}" 
+                             style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;">
+                        <span>${item.name}</span>
+                    </div>
+                </td>
+                <td class="align-middle">₹${item.price}</td>
+                <td class="align-middle">${item.quantity}</td>
+                <td class="align-middle">₹${itemTotal}</td>
+            </tr>
+        `;
+    }
+
+    // Calculate delivery charge
+    const deliveryCharge = subtotal < 1000 ? 50 : 0;
+
+    // Calculate final amount
+    const finalAmount = subtotal + deliveryCharge;
+
+    
+
+    // Set delivery date (3 days from today)
+    const deliveryDate = new Date();
+    deliveryDate.setDate(deliveryDate.getDate() + 3);
+    document.getElementById('delivery-date').innerText = deliveryDate.toDateString();
+
+    // Update total amount in review
+    document.getElementById('final-amount-review').innerText = `₹${finalAmount}`;
 
 
+
+    // Update progress steps
+    const steps = document.querySelectorAll('.checkout-progress .step');
+        steps.forEach((step, index) => {
+            if (index === 1) {
+                step.classList.remove('active');
+            }
+            if (index === 2) {
+                step.classList.add('active');
+            }
+        });
+}
+
+
+// Add event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    const proceedButton = document.getElementById('proceed-button');
+    if (proceedButton) {
+        proceedButton.addEventListener('click', proceedToPayment);
+    }
+
+    const makePaymentButton = document.getElementById('proceed-payment');
+    if (makePaymentButton) {
+        makePaymentButton.addEventListener('click', makePayment);
+    }
+
+    // Add confirm order button listener
+    const confirmOrderButton = document.getElementById('confirm-order');
+    if (confirmOrderButton) {
+        confirmOrderButton.addEventListener('click', function() {
+            alert('Thank you for your order! Your items will be delivered soon.');
+            // Clear cart and redirect to home page
+            localStorage.removeItem('cart');
+            localStorage.removeItem('totalAmount');
+            window.location.href = 'home.html';
+        });
+    }
+});
 
 
 // Function to show error messages

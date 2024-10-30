@@ -208,7 +208,29 @@
                     </label>
                 </div>
 
-                <button class="use-payment" id="proceed-payment">Make Payment</button>
+                <button class="use-payment" id="proceed-payment">use this Payment Method</button>
+            </div>
+
+            <div class="review-section" id="review-section" style="display: none;">
+                <h2>Review Your Order</h2>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="order-summary-items"></tbody>
+                    </table>
+                    <p><strong>Delivery Date:</strong> <span id="delivery-date"></span></p>
+                    <p><strong>Total Amount:</strong> <span id="final-amount-review">₹0</span></p>
+                </div>
+                <button id="confirm-order">Confirm Order and Pay</button>
+
             </div>
 
             <div class="customer-support">
