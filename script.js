@@ -201,6 +201,10 @@ function handleCheckout(event) {
     window.location.href = 'home.html';
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('proceed-button').addEventListener('click', proceedToPayment);
+});
+
 // Form validation
 function validateForm() {
     let isValid = true;
@@ -264,27 +268,47 @@ function validateForm() {
     return isValid;
 }
 
+
 function proceedToPayment() {
-    if (validateForm()) { // Validate the form fields
-        const paymentSection = document.getElementById('payment-section');
-        if (paymentSection) {
-            // Scroll to payment section with smooth behavior
-            paymentSection.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
-            });
-            
-            // Optionally update the progress steps to show payment as active
-            document.querySelectorAll('.checkout-progress .step').forEach((step, index) => {
-                if (index === 1) { // Payment is the second step (index 1)
-                    step.classList.add('active');
-                }
-            });
+    if (validateForm()) {
+        // Hide checkout form section
+        const checkoutLayout = document.querySelector('.checkout-layout');
+        if (checkoutLayout) {
+            checkoutLayout.style.display = 'none';
         }
+
+        // Show payment methods section
+        const paymentMethods = document.getElementById('payment-methods');
+        if (paymentMethods) {
+            paymentMethods.style.display = 'block';
+        }
+
+        // Update progress steps
+        const steps = document.querySelectorAll('.checkout-progress .step');
+        steps.forEach((step, index) => {
+            if (index === 0) {
+                step.classList.remove('active');
+            }
+            if (index === 1) {
+                step.classList.add('active');
+            }
+        });
     } else {
         alert('Please fill in all required fields correctly.');
     }
 }
+
+// Add event listener to the proceed button
+document.addEventListener('DOMContentLoaded', function() {
+    const proceedButton = document.getElementById('proceed-button');
+    if (proceedButton) {
+        proceedButton.addEventListener('click', proceedToPayment);
+    }
+});
+
+
+
+
 
 
 // Function to show error messages

@@ -156,7 +156,7 @@ html {
 }
 
 .payment-methods {
-    display: block; /* Make sure payment section is visible */
+    display: none; /* Make sure payment section is visible */
     margin-top: 30px;
     padding: 20px;
     border: 1px solid #ddd;
