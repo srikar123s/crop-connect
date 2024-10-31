@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 * {
 	box-sizing: border-box;
+	
 }
 
 body {
@@ -12,6 +13,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
+	padding-top: 80px;
 }
 
 h1 {
@@ -157,8 +159,10 @@ section{
 .header{
     position: fixed;
     top:0; left:0; right: 0;
-    z-index: 1000;
+    z-index: 900;
     display: flex;
+	padding: 10px 0 !important; /* Reduce padding */
+    height: 60px;
     align-items: center;
     justify-content: space-between;
     background:#fff;
@@ -220,6 +224,8 @@ section{
     display: none;
 }
 
+
+
 .container {
 	background-color: #fff;
 	border-radius: 10px;
@@ -227,11 +233,11 @@ section{
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	
-	padding-bottom: 15rem;
-	width: 768px;
+	padding-top: 0rem;
+	padding-bottom: 25rem;
+	width: 800px;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 580px;
 }
 
 .form-container {
@@ -345,8 +351,27 @@ section{
 }
 
 .social-container {
-	margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
+
+.social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    color: #555;
+    font-size: 18px;
+}
+
+.social:hover {
+    background-color: #e0e0e0;
+}
+
 
 .social-container a {
 	border: 1px solid #DDDDDD;

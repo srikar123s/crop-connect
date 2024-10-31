@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,11 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="login.css" />
 </head>
+
 <body>
     <!-- Header Section Starts -->
     <header class="header">
         <a href="home.html" class="navbar-brand">
-            <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\Screenshot 2024-10-04 103548.png" alt="Crop Connect Logo" width="50">
+            <img src="C:\Users\srikar\OneDrive\Desktop\crop connect\images\Screenshot 2024-10-04 103548.png"
+                alt="Crop Connect Logo" width="50">
             <span class="brand-name"><b>Crop Connect</b></span>
         </a>
         <nav class="navbar">
@@ -24,7 +27,7 @@
             <a href="home.html#best">Products</a>
         </nav>
     </header>
-    
+
     <br><br><br>
 
     <div class="container" id="container">
@@ -33,9 +36,19 @@
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social" aria-label="Sign in with Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social" aria-label="Sign in with Google"><i class="fab fa-google-plus-g"></i></a>
+                    <!-- <a href="#" class="social" aria-label="Sign in with Google"><i class="fab fa-google-plus-g">
+                        </i></a> -->
+                    
                     <a href="#" class="social" aria-label="Sign in with LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                </div><br>
+                <div id="g_id_onload"
+                data-client_id="116503084132-c3o43ssvu22obvl6grptaoj004pfonkq.apps.googleusercontent.com"
+                data-callback="handleCredentialResponse"
+                data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-shape="pill" data-text="signup_with"
+                data-logo_alignment="left">
+            </div><br>
                 <span>or use your email for registration</span>
                 <input type="text" placeholder="User Name" required />
                 <input type="email" placeholder="Email" required />
@@ -50,10 +63,22 @@
                 <h1>Sign In</h1>
                 <div class="social-container">
                     <a href="#" class="social" aria-label="Sign in with Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social" aria-label="Sign in with Google"><i class="fab fa-google-plus-g"></i></a>
+                    <!-- <a href="#" class="social" aria-label="Sign in with Google"><i class="fab fa-google-plus-g">
+                        </i></a> -->
+                    
                     <a href="#" class="social" aria-label="Sign in with LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                </div><br>
+                <div id="g_id_onload"
+                data-client_id="116503084132-c3o43ssvu22obvl6grptaoj004pfonkq.apps.googleusercontent.com"
+                data-callback="handleCredentialResponse"
+                data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-shape="pill"
+                data-logo_alignment="left">
+            </div>
+                    <br>
                 <span>or use your account</span>
+                <br>
                 <input type="email" placeholder="Email" required />
                 <input type="password" placeholder="Password" required />
                 <a href="#">Forgot your password?</a>
@@ -76,7 +101,7 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         const signUpButton = document.getElementById('signUp');
         const signInButton = document.getElementById('signIn');
@@ -89,6 +114,21 @@
         signInButton.addEventListener('click', () => {
             container.classList.remove("right-panel-active");
         });
+
+        
+        function handleCredentialResponse(response) {
+        // Here you can send the response.credential to your server if needed
+        console.log("Encoded JWT ID token: " + response.credential);
+        
+        // Redirect to home page after successful sign-in
+        window.location.href = "home.html";
+    }
+
+
     </script>
+
+    <script src="https://accounts.google.com/gsi/client" async></script>
+
 </body>
+
 </html>
