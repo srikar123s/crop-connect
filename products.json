@@ -1,0 +1,323 @@
+[
+    {
+        "id": 1,
+        "image": "/images/corn.jpg",
+        "alt": "Corn Seeds",
+        "name": "Corn Seeds",
+        "description": "High-quality corn seeds for maximum yield.",
+        "price": "₹150 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 2,
+        "image": "/images/wheat.jpg",
+        "alt": "Wheat Seeds",
+        "name": "Wheat Seeds",
+        "description": "Premium seeds for high crop production.",
+        "price": "₹120 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 3,
+        "image": "/images/rice.png",
+        "alt": "Rice Seeds",
+        "name": "Rice Seeds",
+        "description": "Quality seeds for better grain yield.",
+        "price": "₹140 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 4,
+        "image": "/images/cap.png",
+        "alt": "Bell Pepper Seeds",
+        "name": "Bell Pepper Seeds",
+        "description": "Seeds for colorful and crunchy bell peppers.",
+        "price": "₹160 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 5,
+        "image": "/images/barley.jpg",
+        "alt": "Barley Seeds",
+        "name": "Barley Seeds",
+        "description": "High-yield barley seeds for brewing and livestock.",
+        "price": "₹160 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 6,
+        "image": "/images/millet.jpg",
+        "alt": "Millet Seeds",
+        "name": "Millet Seeds",
+        "description": "Nutrient-rich seeds for a drought-resistant crop.",
+        "price": "₹100 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 7,
+        "image": "/images/cumber.png",
+        "alt": "Cucumber Seeds",
+        "name": "Cucumber Seeds",
+        "description": "High-quality seeds for refreshing cucumbers.",
+        "price": "₹120 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 8,
+        "image": "/images/tom.png",
+        "alt": "Tomato Seeds",
+        "name": "Tomato Seeds",
+        "description": "High-yield seeds for juicy and flavorful tomatoes.",
+        "price": "₹150 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 9,
+        "image": "/images/bean.png",
+        "alt": "Bean Seeds",
+        "name": "Bean Seeds",
+        "description": "Nutritious seeds for various dishes and crop rotation.",
+        "price": "₹120 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 10,
+        "image": "/images/sun.png",
+        "alt": "Sunflower Seeds",
+        "name": "Sunflower Seeds",
+        "description": "High oil content seeds for oil production.",
+        "price": "₹200 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 11,
+        "image": "/images/brin.png",
+        "alt": "Brinjal Seeds",
+        "name": "Brinjal Seeds",
+        "description": "High-quality seeds for growing healthy and flavorful brinjals.",
+        "price": "₹150 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 12,
+        "image": "/images/cotton.jpg",
+        "alt": "Cotton Seeds",
+        "name": "Cotton Seeds",
+        "description": "Seeds for high-quality cotton production.",
+        "price": "₹250 per kg",
+        "category": "Seeds"
+    },
+    {
+        "id": 13,
+        "image": "/images/npk.png",
+        "alt": "NPK Fertilizer",
+        "name": "NPK 20-20-20 Fertilizer",
+        "description": "Balanced nutrients for better crop yields.",
+        "price": "₹6499 per bag (50 kg)",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 14,
+        "image": "/images/potash.png",
+        "alt": "Potash Fertilizer",
+        "name": "Potash Fertilizer",
+        "description": "Essential potassium fertilizer for crop growth.",
+        "price": "₹299 per kg",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 15,
+        "image": "/images/cal.jpg",
+        "alt": "Calcium Nitrate",
+        "name": "Calcium Nitrate Fertilizer",
+        "description": "Boosts plant development with nitrogen and calcium.",
+        "price": "₹249 per kg",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 16,
+        "image": "/images/ver.png",
+        "alt": "Insecticide",
+        "name": "Verticoz-P Bio Insecticide",
+        "description": "High-efficiency insecticide to protect crops from harmful pests.",
+        "price": "₹699 per liter",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 17,
+        "image": "/images/bisbac.png",
+        "alt": "Herbicide",
+        "name": "Bispyribac Sodium 10%",
+        "description": "Controls weeds and promotes healthy crop growth.",
+        "price": "₹449 per liter",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 18,
+        "image": "/images/ant.png",
+        "alt": "Fungicide",
+        "name": "Antracol Propineb 70% WP",
+        "description": "Protects crops from fungal diseases and increases yields.",
+        "price": "₹999 per kg",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 19,
+        "image": "/images/vermicompost.jpg",
+        "alt": "Organic Fertilizer",
+        "name": "Vermicompost",
+        "description": "Eco-friendly fertilizer to boost plant growth naturally.",
+        "price": "₹299 per bag",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 20,
+        "image": "/images/dap.jpeg",
+        "alt": "DAP Fertilizer",
+        "name": "Diammonium Phosphate (DAP) Fertilizer",
+        "description": "High-performance fertilizer providing essential nitrogen and phosphorus for optimal plant growth.",
+        "price": "₹1199 per bag (50 kg)",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 21,
+        "image": "/images/weed.png",
+        "alt": "Glyphosate",
+        "name": "Glyphosate Weed Killer",
+        "description": "Highly effective herbicide for broad weed control.",
+        "price": "₹399 per liter",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 22,
+        "image": "/images/org.png",
+        "alt": "Organic Compost",
+        "name": "Organic Manure",
+        "description": "Rich compost for improved soil fertility and health.",
+        "price": "₹799 per bag (40 kg)",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 23,
+        "image": "/images/urea.png",
+        "alt": "Urea Fertilizer",
+        "name": "Urea Fertilizer",
+        "description": "Provides essential nitrogen for healthy plant growth.",
+        "price": "₹749 per bag (50 kg)",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 24,
+        "image": "/images/chl.png",
+        "alt": "Chlorpyrifos Insecticide",
+        "name": "Chlorpyrifos Insecticide",
+        "description": "Effective control against soil and foliage pests.",
+        "price": "₹1399 per liter",
+        "category": "Fertilizers"
+    },
+    {
+        "id": 25,
+        "image": "/images/mol.png",
+        "name": "Moldboard Plow",
+        "description": "Sturdy moldboard plow for turning over the soil before sowing.",
+        "price": "₹22499",
+        "category": "Tools"
+    },
+    {
+        "id": 26,
+        "image": "/images/disck.jpg",
+        "name": "Disc Harrow",
+        "description": "Heavy-duty disc harrow for soil cultivation and land preparation.",
+        "price": "₹18999",
+        "category": "Tools"
+    },
+    {
+        "id": 27,
+        "image": "/images/cult.jpg",
+        "name": "Cultivator",
+        "description": "Efficient cultivator for breaking up soil and preparing seedbeds.",
+        "price": "₹12499",
+        "category": "Tools"
+    },
+    {
+        "id": 28,
+        "image": "/images/drill.png",
+        "alt": "Seed Drill",
+        "name": "Seed Drill",
+        "description": "Precision seed drill for evenly planting seeds at the right depth and spacing.",
+        "price": "₹29999",
+        "category": "Tools"
+    },
+    {
+        "id": 29,
+        "image": "/images/fet.jpg",
+        "alt": "Fertilizer Spreader",
+        "name": "Fertilizer Spreader",
+        "description": "Efficient fertilizer spreader for evenly distributing fertilizers and seeds.",
+        "price": "₹4499",
+        "category": "Tools"
+    },
+    {
+        "id": 30,
+        "image": "/images/rot.jpg",
+        "alt": "Rotary Tiller",
+        "name": "Rotary Tiller",
+        "description": "Powerful rotary tiller for preparing soil for planting and removing weeds.",
+        "price": "₹19499",
+        "category": "Tools"
+    },
+    {
+        "id": 31,
+        "image": "/images/earthaguer.jpg",
+        "alt": "Earth Auger",
+        "name": "Earth Auger",
+        "description": "Powerful earth auger for efficient digging of holes for planting trees and posts.",
+        "price": "₹8000",
+        "category": "Tools"
+    },
+    {
+        "id": 32,
+        "image": "/images/spary.jpg",
+        "alt": "Backpack Sprayer",
+        "name": "Backpack Sprayer",
+        "description": "Efficient sprayer for applying fertilizers, pesticides, and herbicides.",
+        "price": "₹9599",
+        "category": "Tools"
+    },
+    {
+        "id": 33,
+        "image": "/images/pump.jpg",
+        "alt": "Water Pump",
+        "name": "Water Pump",
+        "description": "High-performance water pump for efficient irrigation and drainage.",
+        "price": "₹11999",
+        "category": "Tools"
+    },
+    {
+        "id": 34,
+        "image": "/images/pru.jpg",
+        "alt": "Pruners",
+        "name": "Pruners",
+        "description": "Premium garden sharp cutter pruners with a grip handle for trimming plants.",
+        "price": "₹499",
+        "category": "Tools"
+    },
+    {
+        "id": 35,
+        "image": "/images/seedp.png",
+        "alt": "Seed Planter",
+        "name": "Seed Planter",
+        "description": "Precision seed planter for accurate and fast sowing.",
+        "price": "₹25999",
+        "category": "Tools"
+    },
+    {
+        "id": 36,
+        "image": "/images/hea.png",
+        "alt": "Heavy-Duty Wheelbarrow",
+        "name": "Heavy-Duty Wheelbarrow",
+        "description": "Strong and durable wheelbarrow for transporting materials easily.",
+        "price": "₹7999",
+        "category": "Tools"
+    }
+]
